@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>jsonp</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+
+        <script src="jsonp.js"></script>
+        <script>
+            function test(data){
+                alert(data.name);
+            };
+
+            var data = {
+            output: "json"
+        }
+        new JSONP({
+            url:"http://127.0.0.1:8088/jsonp",
+            data:data,
+            callback:"test"});
+        </script>
+    </body>
+</html>
